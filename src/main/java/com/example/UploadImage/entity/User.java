@@ -27,7 +27,7 @@ public class User {
 
 
     @Column(columnDefinition= "VARBINARY", name="email")
-    private String email;
+    private String emailId;
 
     @JsonIgnore
     @Column(name="profilePicBytes")
