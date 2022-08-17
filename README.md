@@ -1,3 +1,6 @@
+#Medium url for Code walkthrough
+https://veeevek.medium.com/upload-file-feature-in-springboot-9e4ed8474b82
+
 #prerequisites before starting the app
 Requires Java18 and mvn 3.8.4
 In application.yml file, configure these properties :
@@ -25,7 +28,7 @@ pom.xml file --  line 17  -- <java.version>18</java.version>
 This application lets you upload a file based on userId and get the file based on emailId. 
 There are two endpoints :
 /users/upload/post - To upload the image.
-Takes userId and profilePicImageFile as the request parameter. If you are using postman use form attributes 
+Takes userId, emailId and profilePicImageFile as the request parameter. If you are using postman use form attributes 
 to pass these properties.
 
 /users/upload/get - To get the image.
@@ -35,4 +38,5 @@ Takes only emailId as the request parameter. If you are using postman, use param
 localhost:8080
 
 #Sample urls
-localhost:8080/users/upload/get?emailId="vivek.sinless@gmail.com" 
+localhost:8080/users/upload/get?emailId="vivek.sinless@gmail.com"
+

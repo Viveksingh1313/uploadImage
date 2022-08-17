@@ -21,14 +21,14 @@ public class UserController {
 
     @PostMapping("/upload/post")
     public ResponseEntity<String> uploadProfilePic(@ModelAttribute User user) throws Exception {
-        log.debug("Inside {} controller", "/user/profile/picture/update");
+        log.debug("Inside {} controller", "/users/upload/post");
         userService.updateProfilePicture(user.getUserId(), user.getProfilePicImageFile());
         return new ResponseEntity<>( "Upload Successful", HttpStatus.OK);
     }
 
     @GetMapping(value = { "/upload/get" }, produces = MediaType.ALL_VALUE)
     public ResponseEntity<byte[]> getProfilePic(@RequestParam String emailId)  {
-        log.debug("Inside {} controller", "/user/profile/picture");
+        log.debug("Inside {} controller", "/users/upload/get");
         User user = userService.getUserDetailsByEmailId(emailId);
         byte[] profilePicBytes = user.getProfilePicBytes();
         return new ResponseEntity<>(profilePicBytes, HttpStatus.OK);
